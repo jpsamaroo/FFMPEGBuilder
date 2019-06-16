@@ -68,13 +68,10 @@ pkg-config --list-all
   --sysroot=/opt/${target}/${target}/sys-root \
   --extra-libs=-lpthread \
   --enable-gpl         \
-  --enable-version3    \
-  --enable-nonfree     \
   --disable-static     \
   --enable-shared      \
   --disable-debug      \
   --disable-doc        \
-  --enable-avresample  \
   --enable-libass      \
   --enable-libfdk-aac  \
   --enable-libfreetype \
@@ -83,11 +80,10 @@ pkg-config --list-all
   --enable-libx264     \
   --enable-libx265     \
   --enable-libvpx      \
-  --enable-encoders    \
-  --enable-decoders    \
-  --enable-muxers      \
-  --enable-demuxers    \
-  --enable-parsers     \
+  --enable-hardcoded-tables \
+  --enable-videotoolbox \
+  --disable-indev=jack \
+  --disable-libjack \
   --extra-cflags="-I${prefix}/include" \
   --extra-ldflags="-L${prefix}/lib"
 make -j${nproc}
